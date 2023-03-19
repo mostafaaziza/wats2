@@ -1,73 +1,145 @@
-/* ---------------------------------------------------------------------------------/
-/                                                                                   /
-/             d8888 888    888                        888b     d888 8888888b.       /
-/            d88888 888    888                        8888b   d8888 888  "Y88b      /
-/           d88P888 888    888                        88888b.d88888 888    888      /
-/          d88P 888 888888 888  8888b.  .d8888b       888Y88888P888 888    888      /
-/         d88P  888 888    888     "88b 88K           888 Y888P 888 888    888      /
-/        d88P   888 888    888 .d888888 "Y8888b.      888  Y8P  888 888    888      /
-/       d8888888888 Y88b.  888 888  888      X88      888   "   888 888  .d88P      /
-/      d88P     888  "Y888 888 "Y888888  88888P'      888       888 8888888P"       /
-/                                                                                   / 
-/-----------------------------------------------------------------------------------/
-/ Author and Main Developer: FantoX                                                 /
-/ Github: https://github.com/FantoX001/Atlas-MD                                     /
-/ Powered By: Team ATLAS                                                            /
-/-----------------------------------------------------------------------------------/
-/             Meet Team ATLAS who holds all rights to this repository:              /
-/                                                                                   /
-/ 1. Pratyush - https://github.com/pratyush4932                                     /
-/ 2. Ahmii - https://github.com/Ahmii-kun                                           /               
-/ 3. Kai - https://github.com/Kai0071                                               /                    
-/ 4. Devime - https://github.com/Devime69                                           /
-/ 5. Jay JayOps - https://github.com/jayjay-ops                                     /
-/                                                                                   /
-/ ----------------------------------------------------------------------------------/
-/                                                                                   /
-/      With all of our hard work and defication you can enjoy this awesome bot!     /  
-/                                                                                   / 
-/----------------------------------------------------------------------------------*/
+const fs = require("fs")
+const chalk = require("chalk")
+
+global.available = true
+global.autoReadGc = true
+global.autoReadAll = false
+global.antitags = true
 
 
-require("dotenv").config();
-let gg = process.env.MODS;
-if (!gg) {
-  gg = "918101187835";   // You can Change this number //
-}
+global.Owner = ['201015820808']
+global.OwnerNumber = ['201015820808']
+global.ownertag = ['201015820808']
+global.BotName = "ᵇᵒᵗ ᵃˡᵃᶻᶤᶻʸ♥️🌿"
+global.packname = "ᵐᵒˢᵗᵃᶠᵃ ᵃˡᵃᶻᶤᶻʸ🗞"
+global.author = "By: ̶a̶l̶̶a̶z̶i̶z̶y̶  ֆ 💭💔ۦ"
+global.OwnerName = "ᵐᵒˢᵗᵃᶠᵃ ᵃˡᵃᶻᶤᶻʸ⁞♩⁽🖤🌩₎⇣✿"
+global.BotSourceCode = "https://www.youtube.com/@ull"
+global.SupportGroupLink = "https://www.youtube.com/@ull"
+global.sessionName = "session"
 
-// -------------------------------------------------------------- //
+// Prefix //
+// 🎗don't change the prefix if you can change the prefix may be bot doesn't work properly//
+global.prefa = ['.'] 
 
 
-global.owner = gg.split(",");
-global.mongodb = process.env.MONGODB || "mongodb+srv://fantox:xrto71r@cluster0.dnlowts.mongodb.net/?retryWrites=true&w=majority";
-global.sessionId = process.env.SESSION_ID || "ok";
-global.prefa = process.env.PREFIX || "-";
-global.tenorApiKey =
-  process.env.TENOR_API_KEY || "AIzaSyCyouca1_KKy4W_MG1xsPzuku5oa8W358c";
-global.packname = process.env.PACKNAME || `Atlas MD`;
-global.author = process.env.AUTHOR || "by: Team Atlas";
-global.port = process.env.PORT || "8000";
+global.location = "Egypt,Egypt"
+global.reactmoji = "❤️"
+global.reactmoji1 = "📃"
+global.reactmoji2 = "🐦"
+global.reactmoji3 = "🥵"
+global.reactmoji4 = "☣️"
+global.reactmoji5 = "🙋🏼‍♀️"
+global.reactmoji6 = "🧐"
+global.reactmoji7 = "🍓"
+global.reactmoji8 = "🔊"
+global.reactmoji9 = "🥳"
+global.reactmoji10 = "⬇️"
+global.reactmoji11 = "🔥"
+global.reactmoji12 = "🎃"
+global.reactmoji13 = "☠️"
+global.reactmoji14 = "🌺"
+global.reactmoji15 = "⚒️"
+global.reactmoji16 = "👫"
+global.reactmoji17 = "🍓"
+global.reactmoji18 = "❤️"
+global.reactmoji19 = "⚠️"
+global.reactmoji20 = "💯"
+global.reactmoji21 = "💖"
+global.reactmoji22 = "✨"
+global.reactmoji23 = "🤖"
+global.themeemoji = "💖"
+global.vidmenu = { url: 'https://c.tenor.com/YGuLegQWubwAAAPo/miku-nakano-gotoubun-no-hanayome.mp4' }
+global.websitex = "https://github.com/Ayush-pandey-u/Chiku-MD"
+global.lolhuman = "KaysaS"
 
-module.exports = {
-  mongodb: global.mongodb,
-};
+global.location = "bihar, India"
+global.reactmoji = "🌚"
+global.themeemoji = "🍭"
+global.vidmenu = { url: 'https://c.tenor.com/YGuLegQWubwAAAPo/miku-nakano-gotoubun-no-hanayome.mp4' }
+global.websitex = "https://chat.whatsapp.com/CMp1e9NHmHU5K5sCM2mmKn"
+global.lolhuman = "KaysaS"
 
-// ---------------------Do Not Modify this part------------------- //
+
+global.BotLogo = fs.readFileSync("./Assets/pic1.jpg")
+global.Thumb = fs.readFileSync("./Assets/pic9.jpg")
+global.Thumb1 = fs.readFileSync("./Assets/pic5.jpg")
+global.ErrorPic = fs.readFileSync("./Assets/pic7.jpg")
+
+
+global.ntilinkytvid = []
+global.ntilinkytch = []
+global.ntilinkig = []
+global.ntilinkfb = []
+global.ntilinktg = []
+global.ntilinktt = []
+global.ntilinktwt = []
+global.ntilinkall = []
+global.nticall = []
+global.ntwame = []
+global.nttoxic = []
+global.ntnsfw = []
+global.ntvirtex = []
+global.rkyt = []
+global.wlcm = []
+global.gcrevoke = []
+global.autorep = []
+global.ntilink = []
+
 
 global.mess = {
-  jobdone: "Job done...",
-  useradmin: "Sorry, only *Group Admins* can use this command *Baka*!",
-  botadmin:
-    "Sorry, i cant execute this command without being an *Admin* of this group.",
-  botowner: "Only my *Owner* can use this command, Baka!",
-  grouponly: "This command is only made for *Groups*, Baka!",
-  privateonly: "This command is only made for *Private Chat*, Baka!",
-  botonly: "Only the *Bot itself* can use this command!",
-  waiting: "Chotto Matte...",
-  nolink: "Please provide me *link*, Baka!",
-  error: "An error occurd!",
-  banned: `You are *Banned* fron using commands!  \n\nType *${prefa}owner* or *${prefa}support* to submit a request to unban yourself !`,
-  bangc: "This Group is *Banned* from using Commands!",
-  nonsfw: "Dont be a pervert Baka! This is not a NSFW enabled group!",
-};
+    jobdone: '⋆ تم الامر بنجاح •',
+    useradmin: '⋆ هذا الامر يخص الادمن •',
+    botadmin: '⋆ ارفع البوت ادمن وحاول مره اخري •',
+    botowner: '⋆ هذا الامر يخص المالك •',
+    grouponly: '⋆ هذا الامر يعمل فجروبات فقط •',
+    privateonly: '⋆ هذا الامر يعمل فلخاص فقط •',
+    botonly: '⋆ هذا الامر يخص البوت فقط •',
+    waiting: '⋆ انتظر من فضلك •',
+    nolink: '⋆ اين الرابط •',
+    error: '⋆ هناك خطا حاول مره اخري •',
+    banned: 'انت محظور من استخدام البوت اتواصل مع المطور لالغاء حظرك!',
+    bangc: '⋆ عفوا هذا الجروب محظور من استخدام البوت •',
+    nonsfw: '⋆ احترم نفسك الجروب ده طاهر هههه'
+    
+}
 
+
+global.limitawal = {
+    premium: "Infinity",
+    free: 2,
+    monayawal: 1000
+}
+   global.rpg = {
+   darahawal: 100,
+   besiawal: 95,
+   goldawal: 30,
+   emeraldawal: 8,
+   umpanawal: 10,
+   potionawal: 5
+}
+global.limitawal = {
+    rakyat: "Infinity",
+    free: 100
+}
+
+
+global.APIs = {
+	zenz: 'https://zenzapis.xyz',
+}
+global.APIKeys = {
+	'https://zenzapis.xyz': '5d1197db351b',
+}
+
+
+global.flaming = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
+global.fluming = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=fluffy-logo&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
+global.flarun = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=runner-logo&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
+global.flasmurf = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=smurfs-logo&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
+let file = require.resolve(__filename)
+fs.watchFile(file, () => {
+	fs.unwatchFile(file)
+	console.log(chalk.redBright(`Update'${__filename}'`))
+	delete require.cache[file]
+	require(file)
+})
